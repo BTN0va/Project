@@ -1,0 +1,56 @@
+Open an IDLE window and enter the program from Figure 1-7 that computes the area of a rectangle. 
+Save the program to a file named rectangle.py and load it into the shell by pressing the F5 key and correct any errors that occur. 
+Test the program with different inputs by running it at least three times. 
+
+#input message to get length of edge
+length = int(input("Enter the length of an edge: "))
+length
+
+#computing surface area with given edge
+surfaceArea = 6 * (length ** 2)
+
+#print output
+print(surfaceArea)
+
+Write and test a program in a file named circle.py that computes the area of a circle. 
+This program should request a number representing a radius as input from the user. 
+It should use the formula 3.14 * radius ** 2 to compute the area and then output this result suitably labeled. 
+
+#input message to get length of a spheres radius
+radius = int(input("Enter the radius of a sphere: "))
+radius
+
+#computing the the sphere's diameter, circumfrence, surface area, and volume
+diameter = radius * 2
+circumference = 2 * 3.14 * radius
+surfaceArea = 4 * 3.14 * (radius ** 2)
+volume = 1.33 * 3.14 * (radius ** 3)
+
+#print all output
+print("radius = ")
+print(radius)
+print("diameter = ")
+print(diameter)
+print("circumference = ")
+print(circumference)
+print("surface area = ")
+print(surfaceArea)
+print("volume = ")
+print(volume)
+
+A cuboid is a solid figure bounded by six rectangular faces. 
+Its dimensions are its height, width, and depth. Write a Python program in a file named cuboid.py that computes and prints the volume of a cuboid, given its height, width, and depth as inputs. 
+The volume is just the product of these three inputs. The output should be labeled as “cubic units.”
+
+#input message to get mass and velocity
+mass = int(input("enter mass of the object in kilos: "))
+mass
+
+velocity = int(input("enter the velocity of the object in meters per second: "))
+velocity
+#computing the momentum using the numbers given
+momentum = mass * velocity
+
+#print output
+print("the momentum of the object is ")
+print(momentum)
