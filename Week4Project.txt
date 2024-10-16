@@ -1,0 +1,39 @@
+Write a script in the file encrypt.py that inputs a line of plaintext and a distance value and outputs an encrypted text using a Caesar cipher. 
+The script should work for any printable characters.
+
+sideA=(int)(input('enter value for first side '))
+sideB=(int)(input('enter the value for the second side '))
+sideC=(int)(input('enter the value for the final side '))
+if (sideA==sideB) and (sideB==sideC):
+    print('This is an equilateral triangle')
+else:
+    print('This is not an equilateral triangle')
+
+Octal numbers have a base of eight and the digits 0–7. Write the scripts octaltodecimal.py and decimaltooctal.py , which convert numbers between the octal and decimal representations of integers. 
+These scripts use algorithms that are similar to those of the binaryToDecimal and decimalToBinary scripts developed in Section 4-3.
+
+dropHeight = int(input("enter the drop height: "))
+bounceIndex = float(input("enter the bounce index: "))
+bounceNumber = int(input("enter the number of bounces: "))
+totalDistanceTraveled = 0
+for x in range(bounceNumber):
+    totalDistanceTraveled += dropHeight + (bounceIndex * dropHeight)
+    dropHeight = (bounceIndex * dropHeight)
+print("total distance traveled: ", totalDistanceTraveled)
+
+A bit shift is a procedure whereby the bits in a bit string are moved to the left or to the right. 
+For example, we can shift the bits in the string 1011 two places to the left to produce the string 1110 . 
+Note that the leftmost two bits are wrapped around to the right side of the string in this operation. 
+Define two scripts, shiftleft.py and shiftright.py , that expect a bit string as an input.
+The script shiftLeft shifts the bits in its input one place to the left, wrapping the leftmost bit to the rightmost position. 
+The script shiftRight performs the inverse operation. Each script prints the resulting string.
+
+startingPopulation = int(input("starting number of organisms: "))
+rateOfGrowth = float(input("average rate of growth: "))
+growthPeriod = int(input("number of hours to multiply: "))
+population = startingPopulation
+
+print("hours\tPopulation\n")
+for currentHour in range (1, growthPeriod + 1 ):
+    print( currentHour, "\t", population )
+    population = population + ( rateOfGrowth * population )
