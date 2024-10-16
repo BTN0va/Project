@@ -1,0 +1,79 @@
+Write a program in the file equilateral.py that accepts the lengths of three sides of a triangle as inputs. 
+The program output should indicate whether or not the triangle is an equilateral triangle.
+
+"""
+Program: taxform.py
+Author: Donovan Russell
+
+Compute a person's income tax.
+
+1. Significant constants
+       tax rate
+       standard deduction
+       deduction per dependent
+2. The inputs are
+       gross income 
+       number of dependents 
+3. Computations:
+       taxable income = gross income - the standard deduction - 
+                        a deduction for each dependent 
+       income tax = is a fixed percentage of the taxable income 
+4. The outputs are
+       the income tax
+"""
+
+# Initialize the constants
+TAX_RATE = 0.20
+STANDARD_DEDUCTION = 10000.0
+DEPENDENT_DEDUCTION = 3000.0
+               
+# Request the inputs
+grossIncome = float(input("Enter the gross income: "))
+numDependents = int(input("Enter the number of dependents: "))   
+
+# Compute the income tax
+taxableIncome = grossIncome - STANDARD_DEDUCTION - \
+                DEPENDENT_DEDUCTION * numDependents
+incomeTax = taxableIncome * TAX_RATE
+
+#rounding income tax
+roundIncomeTax = round(incomeTax,2)         
+# Display the income tax
+print("The income tax is $" + str(roundIncomeTax))
+
+Teachers in most school districts are paid on a schedule that provides a salary based on their number of years of teaching experience. 
+For example, a beginning teacher in the Lexington School District might be paid $30,000 the first year. 
+For each year of experience after this first year, up to 10 years, the teacher receives a 2% increase over the preceding value. 
+Write a program in the file salary.py that displays a salary schedule, in tabular format, for teachers in a school district. 
+The inputs are the starting salary, the percentage increase, and the number of years in the schedule. 
+Each row in the schedule should contain the year number and the salary for that year. 
+
+# initializing the hour day and year
+HOUR = 60
+DAY = 24
+YEAR = 365
+
+#compute total mins in a year
+totalMinsYear = HOUR * DAY * YEAR
+print(totalMinsYear, "Total miniutes in a year")
+
+The credit plan at TidBit Computer Store specifies a 10% down payment and an annual interest rate of 12%. 
+Monthly payments are 5% of the listed purchase price, minus the down payment. 
+Write a program in the file tidbit.py that takes the purchase price as input. 
+The program should display a table, with appropriate headers, of a payment schedule for the lifetime of the loan. 
+Each row of the table should contain the following items:
+the month number (beginning with 1)
+the current total balance owed
+the interest owed for that month
+the amount of principal owed for that month
+the payment for that month
+the balance remaining after payment
+The amount of interest for a month is equal to balance * rate / 12. The amount of principal for a month is equal to the monthly payment minus the interest owed.
+
+HourlyWage = float(input("please enter your hourly wage:$"))
+TotalRegHours = float(input("please enter the total regular hours:"))
+TotalOvertimeHours = float(input("please enter the total overtime hours:"))
+OvertimePay = (TotalOvertimeHours) * (1.5) * (HourlyWage)
+TotalWeeklyPay = ((HourlyWage) * (TotalRegHours) + OvertimePay)
+
+print("Their total pay is:$", + TotalWeeklyPay) 
