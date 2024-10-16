@@ -1,0 +1,62 @@
+Modify the sentence-generator program of Case Study 5-1 (in the file generator.py) so that it inputs its vocabulary from a set of text files at startup. 
+The filenames are nouns.txt, verbs.txt, articles.txt, and prepositions.txt. (Hint: Define a single new function, getWords. 
+This function should expect a filename as an argument. The function should open an input file with this name, define a temporary list, read words from the file, and add them to the list. 
+The function should then convert the list to a tuple and return this tuple. 
+Call the function with an actual filename to initialize each of the four variables for the vocabulary.)
+
+import random
+import math
+smaller = int(input("enter the smaller number: "))
+larger = int(input("Enter the larger number: "))
+myNumber = random.randint(smaller, larger)
+count  = 0
+maxGuesses = round(math.log(larger - smaller + 1, 2))
+while True:
+    count += 1
+    print(smaller, larger)
+    yourNumber = (smaller + larger) // 2
+    print("your number is", yourNumber)
+    answer = input("Enter =, <, or >: ")
+    if answer == "=":
+        print("i got it in", count, "tries")
+    elif yourNumber > myNumber:
+        print("im out of guess, you win")
+    elif answer == "<":
+        larger = yourNumber - 1
+    else: smaller = yourNumber + 1
+
+Write a program in the file unique.py that inputs a text file. 
+The program should print the unique words in the file in alphabetical order.
+
+salary = int(input('enter the starting salary: $'))
+annual_Increase = (float(input('enter the annual % increase: ')) / 100)
+years = int(input('enter the number of years: '))
+print('year\tsalary')
+for year in range(1, years + 1):
+    print(year,'\t',format(salary, '.2f'))
+    salary = salary + salary * annual_Increase
+    
+Conversations often shift focus to earlier topics. Modify the therapist program in the file doctor.py to support this capability. 
+Add each patient input to a history list. 
+Then occasionally choose an element at random from this list, change persons, and prepend (add at the beginning) the qualifier “Earlier you said that” to this reply. 
+Make sure that this option is triggered only after several exchanges have occurred.
+
+purPrice = float(input("enter the puchase price: $"))
+balance = 0.9 * purPrice
+monPayment = 0.05 * balance
+annRate = 0.12
+monRate = annRate / 12
+month = 1
+print("month starting balance interest to pay principal to pay payment ending balance")
+while balance > 0:
+    if monPayment > balance:
+        monPayment = balance
+        interest = 0
+    else:
+        interest = balance * monRate
+    principal = monPayment - interest
+    remaining = balance - principal
+    print(f"{month:>5d}{balance:>17.2f}{interest:>16.2f}{principal:>17.2f}{monPayment:>8.2f}{remaining:>15.2f}")
+    month += 1
+    balance = remaining
+
