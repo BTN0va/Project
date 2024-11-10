@@ -48,14 +48,18 @@ Write a program in the file salary.py that displays a salary schedule, in tabula
 The inputs are the starting salary, the percentage increase, and the number of years in the schedule. 
 Each row in the schedule should contain the year number and the salary for that year. 
 
-# initializing the hour day and year
+# initializing the hour, day, and year
 HOUR = 60
 DAY = 24
 YEAR = 365
 
-#compute total mins in a year
+# compute total minutes in a year
 totalMinsYear = HOUR * DAY * YEAR
-print(totalMinsYear, "Total miniutes in a year")
+print(totalMinsYear, "Total minutes in a year")
+
+# compute total seconds in a year
+totalSecsYear = totalMinsYear * 60
+print(totalSecsYear, "Total seconds in a year")
 
 The credit plan at TidBit Computer Store specifies a 10% down payment and an annual interest rate of 12%. 
 Monthly payments are 5% of the listed purchase price, minus the down payment. 
