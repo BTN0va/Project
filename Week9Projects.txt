@@ -1,0 +1,50 @@
+Project #1
+////////////////////////
+import turtle
+import math
+
+def draw_circle(radius):
+    circumference = 2.0 * math.pi * radius
+    steps = 120.0
+    step_length = circumference / steps
+    angle = 360.0 / steps
+
+    for _ in range(int(steps)):
+        turtle.forward(step_length)
+        turtle.right(angle)
+
+radius = 100  
+turtle.speed(100)
+draw_circle(radius)
+turtle.done()
+
+Project #3
+////////////////////////////////
+import turtle
+
+def koch_snowflake(t, order, size):
+    if order == 0:
+        t.forward(size)
+    else:
+        for angle in [60, -120, 60, 0]:
+            koch_snowflake(t, order - 1, size / 3)
+            t.left(angle)
+
+def main():
+    window = turtle.Screen()
+    window.bgcolor("white")
+    
+    t = turtle.Turtle()
+    t.speed(600)
+    
+    order = 4  
+    size = 290  
+    
+    for _ in range(3):
+        koch_snowflake(t, order, size)
+        t.right(120)
+    
+    window.exitonclick()
+
+if __name__ == "__main__":
+    main()
