@@ -1,0 +1,65 @@
+Project #1
+////////////////////////////////////////////
+from breezypythongui import EasyFrame
+
+class TemperatureConverter(EasyFrame):
+    def __init__(self):
+        EasyFrame.__init__(self,"Temperature Converter", width=300, height=200)
+        
+        self.addLabel("Fahrenheit", row = 0, column = 0)
+        self.addLabel("Celsius", row = 1, column = 0)
+        
+        self.fahrenheitField = self.addFloatField(value = 32.0, row = 0, column = 1)
+        self.celsiusField = self.addFloatField(value = 0.0, row = 1, column = 1)
+        
+        fahrenheitToCelsius = self.addButton(text = ">>>>", row = 2, column = 0, command = self.computeCelsius)
+        celsiusToFahrenheit = self.addButton(text = "<<<<", row = 2, column = 1, command = self.computeFahr)
+
+    def computeCelsius(self):
+        fahrenheitTemp = self.fahrenheitField.getNumber()
+        fahrToCelsius = (fahrenheitTemp - 32) * (5/9)
+        self.celsiusField.setNumber(fahrToCelsius)
+
+    def computeFahr(self):
+        celsiusTemp = self.celsiusField.getNumber()
+        celsiusToFahr = (celsiusTemp * 9.0 / 5.0) + 32
+        self.fahrenheitField.setNumber(celsiusToFahr)
+
+def main():
+    TemperatureConverter().mainloop()
+
+if __name__ == "__main__":
+    main()
+
+Project #3
+////////////////////////////////////////////////
+from breezypythongui import EasyFrame
+
+class TemperatureConverter(EasyFrame):
+    def __init__(self):
+        EasyFrame.__init__(self,"Temperature Converter", width=300, height=200)
+        
+        self.addLabel("Fahrenheit", row = 0, column = 0)
+        self.addLabel("Celsius", row = 1, column = 0)
+        
+        self.fahrenheitField = self.addFloatField(value = 32.0, row = 0, column = 1)
+        self.celsiusField = self.addFloatField(value = 0.0, row = 1, column = 1)
+        
+        fahrenheitToCelsius = self.addButton(text = ">>>>", row = 2, column = 0, command = self.computeCelsius)
+        celsiusToFahrenheit = self.addButton(text = "<<<<", row = 2, column = 1, command = self.computeFahr)
+
+    def computeCelsius(self):
+        fahrenheitTemp = self.fahrenheitField.getNumber()
+        fahrToCelsius = (fahrenheitTemp - 32) * (5/9)
+        self.celsiusField.setNumber(fahrToCelsius)
+
+    def computeFahr(self):
+        celsiusTemp = self.celsiusField.getNumber()
+        celsiusToFahr = (celsiusTemp * 9.0 / 5.0) + 32
+        self.fahrenheitField.setNumber(celsiusToFahr)
+
+def main():
+    TemperatureConverter().mainloop()
+
+if __name__ == "__main__":
+    main()
