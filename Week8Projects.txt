@@ -1,0 +1,46 @@
+Project #3
+/////////////////////////////////////////
+def isSorted(currentList):
+    if len(currentList) <= 1:
+        return True
+    for i in range(len(currentList) - 1):
+        if currentList[i] > currentList[i + 1]:
+            return False
+    return True
+
+Project #6
+/////////////////////////////////////////
+import os
+
+def read_numbers(file_path):
+    with open(file_path, 'r') as file:
+        return [float(line.strip()) for line in file]
+
+def compute_average(numbers):
+    return sum(numbers) / len(numbers) if numbers else 0
+
+def main():
+    file_path = r'C:\Users\DJLR1\Downloads\numbers.txt'
+    numbers = read_numbers(file_path)
+    average = compute_average(numbers)
+    print(f'The average is: {average}')
+
+if __name__ == "__main__":
+    main()
+
+Project #7
+//////////////////////////////////////
+def inputFloat(prompt):
+    while True:
+        theString = input(prompt)
+        if theString.isdigit():
+            return float(theString)
+        else:
+            print("Error: the input must consist only of digits")
+
+def main():
+    n = inputFloat("Please enter a number: ")
+    print(n)
+
+if __name__ == "__main__":
+    main()
